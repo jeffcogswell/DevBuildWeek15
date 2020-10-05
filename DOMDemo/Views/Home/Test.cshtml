@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+
+    <style>
+        .redbackground {
+            background-color: red;
+        }
+
+        .bluebackground {
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+
+        // alert('Starting Up!');
+
+        function changeClass() {
+            let q = document.getElementById('block1');
+            q.className = 'bluebackground';
+        }
+
+
+        function doSomething(fun) {
+            fun();
+        }
+
+        let obj = {
+            len: 10,
+            wid: 20,
+            name: 'Rectangle',
+            area: function () {
+                return this.len * this.wid;
+            }
+        };
+
+        function submitForm() {
+            let first = document.getElementById('FirstNameElem');
+            let last = document.getElementById('LastNameElem');
+
+            first.value = first.value.toUpperCase();
+            last.value = last.value.toUpperCase();
+
+            if (first.value == 'JEFF') {
+                let block1 = document.getElementById('block1');
+                block1.innerHTML = 'Jeff is not welcome';
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <h1>Hello World</h1>
+
+    <div id="block1" class="redbackground">
+        <h2>This is a block of <i>HTML</i></h2>
+    </div>
+
+    <div id="block2" class="bluebackground">
+        <h2>This is another block of <i>HTML</i></h2>
+    </div>
+
+    <div class="redbackground" id="block3">
+        <h2>This is a third block of <i>HTML</i></h2>
+    </div>
+
+    <button onclick="alert('Hello')">Click Me</button>
+
+    <button onclick="changeClass()">Change Style</button>
+
+    <form method="get" action="/home/result" onsubmit="return submitForm()">
+        First Name: <input type="text" name="FirstName" id="FirstNameElem" /><br />
+        Last Name: <input type="text" name="LastName" id="LastNameElem" /><br />
+        <input type="submit" />
+    </form>
+
+</body>
+</html>
