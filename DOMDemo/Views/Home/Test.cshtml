@@ -42,6 +42,7 @@
         };
 
         function submitForm() {
+
             let first = document.getElementById('FirstNameElem');
             let last = document.getElementById('LastNameElem');
 
@@ -56,6 +57,43 @@
             else {
                 return true;
             }
+        }
+
+        function trip(car) {
+            console.log('Welcome to the trip function');
+            car.drive();
+            console.log('Finished with the trip');
+        }
+
+        function testtrip() {
+            let honda = {
+                model: 'Civic',
+                color: 'Red',
+                drive: function () {
+                    console.log('Honda is driving.');
+                }
+            };
+
+            trip(honda);
+
+            let schwin = {
+                model: 'abc',
+                color: 'Black',
+                wheelsize: 30
+            };
+
+            trip(schwin);
+
+            let chevy = {
+                model: 'Trax',
+                color: 'Blue',
+                drive: function () {
+                    console.log('Chevy is driving');
+                },
+                trim: 'LX'
+            };
+
+            trip(chevy);
         }
 
 
@@ -86,6 +124,11 @@
         Last Name: <input type="text" name="LastName" id="LastNameElem" /><br />
         <input type="submit" />
     </form>
+
+    <br />
+    <br />
+
+    <button onclick="testtrip()">Test Trip</button>
 
 </body>
 </html>
