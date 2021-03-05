@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+<script>
+    function validate() {
+        return false;
+    }
+</script>
+
+<h1>Login</h1>
+
+<form method="post" action="/home/verify" onsubmit="return validate()">
+    First Name: <input type="text" name="FirstName" id="FirstNameElem" /><br />
+    Last Name: <input type="text" name="LastName" id="LastNameElem"/><br />
+    Email: <input type="text" name="Email" id="EmailElem" /><br />
+    Password: <input type="password" name="Password" id="PasswordElem" /><br />
+    Confirm Password: <input type="password" id="ConfirmElem" /><br />
+    <input type="submit" />
+</form>

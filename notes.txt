@@ -1,0 +1,184 @@
+Upload javascript slides and DOM slides
+
+My slides: NaN
+
+JavaScript
+
+Code along - in the web console
+	Triple equal vs double-equal
+	Similar with not double equal vs not equal
+	Truthy stuff -- try !!
+
+Spend a whole hour or session on functions
+Code along
+	Passing different types to a function; passing different number of parameters 
+	to a function -- test it out to see what happens
+		function mult(x,y) {
+			console.log(x);
+			console.log(y);
+			return x * y;
+		}
+	
+	Creating a function
+	Saving a function in a variable <-- VERY IMPORTANT
+	Calling the function saved in a variable
+	Then console.log the variable
+	Saving it into another variable
+	Test equality
+	Call both
+
+
+Running a function automatically by putting () after it
+Passing a function into a function
+Calling the passed in function
+Functions returning a function
+
+----
+
+The DOM
+
+Create an ASP.NET core mvc project
+Add a basic HTML page via a View tht has no layout
+
+Open in browser
+Inspect
+Look at the elements and their attributes
+
+Add some CSS at the top with a style tag
+	In the inspector, in the styles, change the style. But don't do this -- we'll revisit shortly
+	Don't change the attributes of a style! Bad form.
+	
+	In the inspector, change the class of one of the elements
+
+Add an ID to each div
+	Make IDs unique! The browser won't stop you but it's bad form
+	
+	document.getElementById("block1")
+	Look at results. Float mouse over it. See element highlighted. 
+	
+	q = ...
+	q.innerHTML = "Changed Text"
+
+Add some JavaScript inside a script tag
+
+
+
+Add a JavaScript function that adds a class to a DIV
+
+First add alert('hello') to onclick and explain that we're in the confines of the browser
+
+----
+
+Declaring variables without var -- very bad
+Storing different types after a variable is created, demo this (string then bool)
+
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+    <style>
+        .redbackground {
+            background-color: red;
+        }
+        .bluebackground {
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+        function ClickMe() {
+            document.getElementById('block1').className = 'bluebackground';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Welcome</h1>
+        <div id="block1" class="redbackground">
+            <h2>This is a block of <b>HTML</b></h2>
+        </div>
+        <div id="block2" class="bluebackground">
+            <h2>This is another block of <i>HTML</i></h2>
+        </div>
+        <div id="block3" class="redbackground">
+            <h2>And a third block of <b>HTML</b></h2>
+        </div>
+
+        <button onclick="alert('hello')">Click Me</button>
+    </div>
+</body>
+</html>
+
+
+debugger
+
+JavaScript Practice
+
+Go to groogle and open up the console. Try each of these, and think carefully about the results before proceeding to the next.
+
+if (0) { console.log('if part') } else { console.log('else part') }
+
+
+Numbers compared to numbers and strings
+
+3 == 4
+
+3 == 3
+
+3 == "3"
+
+"3" == 3
+
+"3" === 3
+
+0 == ""
+
+0 === ""
+
+Numbers compared to booleans
+
+1 == true
+
+1 === true
+
+2 == true
+
+2 == false
+
+2 === false
+
+0 == false
+
+0 === false
+
+true == "true"
+
+Strings compared to booleans
+
+"" == true
+
+"" == false
+
+"" === false
+
+Things that are truthy
+
+boolean true
+number 1
+
+Things that are falsy
+
+boolean false
+number 0
+empty string ""
+
+---
+function trip(car) {
+    car.drive();
+}

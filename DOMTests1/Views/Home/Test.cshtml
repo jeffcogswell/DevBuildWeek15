@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+    <style>
+        .redbackground {
+            background-color: red;
+        }
+        .bluebackground {
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+        function ClickMe() {
+            document.getElementById('block1').className = 'bluebackground';
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Welcome</h1>
+        <div id="block1" class="redbackground">
+            <h2>This is a block of <b>HTML</b></h2>
+        </div>
+        <div id="block2" class="bluebackground">
+            <h2>This is another block of <i>HTML</i></h2>
+        </div>
+        <div id="block3" class="redbackground">
+            <h2>And a third block of <b>HTML</b></h2>
+        </div>
+
+        <button onclick="alert('hello')">Click Me</button>
+    </div>
+</body>
+</html>
